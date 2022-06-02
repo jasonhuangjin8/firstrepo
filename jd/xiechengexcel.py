@@ -18,7 +18,7 @@ def main():
                 df = pandas.read_excel(file, sheet_name='预付订单明细',header=1,skipfooter=1,usecols=['订单号', '入住日期','离店日期','房型名称','客人姓名','间夜','结算价'])
 
 
-                conn=pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='yR3*DXCjiaZ3O2iR', db='orderid', charset='utf8')
+                conn=pymysql.connect(host='127.0.0.1', port=3306, user='pwd', passwd='yR3*pwd', db='orderid', charset='utf8')
 
                 cur=conn.cursor()#获取游标
                 #另一种插入数据的方式，通过字符串传入值
