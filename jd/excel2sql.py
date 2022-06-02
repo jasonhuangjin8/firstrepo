@@ -11,12 +11,12 @@ def main():
 
     for root, dirs, files in os.walk(file_dir):
         for file in files:
-            if "方舟八号酒店" in file:
+            if "酒店" in file:
                 print(file)
                 df = pandas.read_excel(file, sheet_name='订单详情',usecols=['美团订单号'])
 
 
-                conn=pymysql.connect(host='10.200.1.100', port=3306, user='huang', passwd='huang520', db='orderid', charset='utf8')
+                conn=pymysql.connect(host='10.200.1.100', port=3306, user='pwd', passwd='pwd', db='orderid', charset='utf8')
 
                 cur=conn.cursor()#获取游标
                 #另一种插入数据的方式，通过字符串传入值
@@ -41,7 +41,7 @@ def main():
                 df = pandas.read_excel(file, sheet_name='预付订单明细',header=1,skipfooter=1,usecols=['订单号'])
 
 
-                conn=pymysql.connect(host='10.200.1.100', port=3306, user='huang', passwd='huang520', db='orderid', charset='utf8')
+                conn=pymysql.connect(host='10.200.1.100', port=3306, user='pwd', passwd='pwd', db='orderid', charset='utf8')
 
                 cur=conn.cursor()#获取游标
                 #另一种插入数据的方式，通过字符串传入值
