@@ -36,7 +36,7 @@ class MSSQL:
     return resList  
 
 def meituan():
-  ms = MSSQL(host="10.200.1.100", user="sa", pwd="sql", db="JHFZBH_R2022")
+  ms = MSSQL(host="10.200.1.100", user="pwd", pwd="pwd", db="JHFZBH_R2022")
   startstamp1 = e1.get()
   endstamp1 = e2.get()
   print(str(startstamp1 + endstamp1))
@@ -71,7 +71,7 @@ def xiecheng():
         print(no1[x])
         search(str(no1[x]),"ctrip")
 def feizhu():
-  ms = MSSQL(host="10.200.1.100", user="sa", pwd="sql", db="JHFZBH_R2022")
+  ms = MSSQL(host="10.200.1.100", user="pwd", pwd="pwd", db="JHFZBH_R2022")
   startstamp1 = e1.get()
   endstamp1 = e2.get()
   #print(str(startstamp1 + endstamp1))
@@ -91,7 +91,7 @@ def clear():
 
 
 def search(order_id,pintai):
-  conn = pymysql.connect(host='127.0.0.1', port=3306, user='root', passwd='', db='orderid', charset='utf8')
+  conn = pymysql.connect(host='127.0.0.1', port=3306, user='pwd', passwd='pwd', db='orderid', charset='utf8')
   cur = conn.cursor()  # 获取游标
 
   cur.execute("select * from "+pintai+" where "+pintai+"_order_id='"+order_id+"'")
